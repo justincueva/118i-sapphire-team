@@ -1,0 +1,96 @@
+import pandas as pd
+
+# Synthetic dataset for Emergency Interim Housing in San Jose
+data = [
+    {
+        "Facility ID": 101,
+        "Facility Name": "Bernal Housing",
+        "Address": "123 Bernal Rd, San Jose, CA",
+        "Capacity": 100,
+        "Occupancy": 85,
+        "Opening Date": "2020-01-15",
+        "Number of Units": 50,
+        "Unit Type": "Modular Units",
+        "Support Services Available": "Job Placement, Health Services",
+        "Average Length of Stay (days)": 90,
+        "Contact Information": "(408) 555-0101"
+    },
+    {
+        "Facility ID": 102,
+        "Facility Name": "Branham-Monterey",
+        "Address": "456 Branham Ln, San Jose, CA",
+        "Capacity": 150,
+        "Occupancy": 120,
+        "Opening Date": "2021-06-20",
+        "Number of Units": 75,
+        "Unit Type": "Tiny Homes",
+        "Support Services Available": "Counseling, Life Skills Training",
+        "Average Length of Stay (days)": 120,
+        "Contact Information": "(408) 555-0102"
+    },
+    {
+        "Facility ID": 103,
+        "Facility Name": "Evans Lane Housing",
+        "Address": "789 Evans Ln, San Jose, CA",
+        "Capacity": 120,
+        "Occupancy": 110,
+        "Opening Date": "2022-03-10",
+        "Number of Units": 60,
+        "Unit Type": "Prefab Units",
+        "Support Services Available": "Behavioral Health, Job Training",
+        "Average Length of Stay (days)": 100,
+        "Contact Information": "(408) 555-0103"
+    },
+    {
+        "Facility ID": 104,
+        "Facility Name": "Felipe Housing",
+        "Address": "321 Felipe Ave, San Jose, CA",
+        "Capacity": 80,
+        "Occupancy": 70,
+        "Opening Date": "2023-09-05",
+        "Number of Units": 40,
+        "Unit Type": "Modular Units",
+        "Support Services Available": "Substance Abuse Counseling",
+        "Average Length of Stay (days)": 110,
+        "Contact Information": "(408) 555-0104"
+    },
+    {
+        "Facility ID": 105,
+        "Facility Name": "Guadalupe Housing",
+        "Address": "654 Guadalupe Pkwy, San Jose",
+        "Capacity": 90,
+        "Occupancy": 85,
+        "Opening Date": "2024-02-18",
+        "Number of Units": 45,
+        "Unit Type": "Tiny Homes",
+        "Support Services Available": "Health Services, Life Skills",
+        "Average Length of Stay (days)": 95,
+        "Contact Information": "(408) 555-0105"
+    },
+    {
+        "Facility ID": 106,
+        "Facility Name": "Mabury Housing",
+        "Address": "987 Mabury Rd, San Jose, CA",
+        "Capacity": 110,
+        "Occupancy": 95,
+        "Opening Date": "2024-07-22",
+        "Number of Units": 55,
+        "Unit Type": "Prefab Units",
+        "Support Services Available": "Job Placement, Counseling",
+        "Average Length of Stay (days)": 105,
+        "Contact Information": "(408) 555-0106"
+    },
+    {
+        "Facility ID": 107,
+        "Facility Name": "Rue Ferrari Housing",
+        "Address": "159 Rue Ferrari, San Jose, CA",
+        "Capacity": 130,
+        "Occupancy": 115,
+        "Opening Date": "2025-01-30",
+        "Number of Units": 65,
+        "Unit Type": "Modular Units",
+        "Support Services Available": "Behavioral Health, Substance Abuse",
+        "Average Length of Stay (days)": 115,
+        "Contact Information": "(408) 555-0107"
+    }
+]
