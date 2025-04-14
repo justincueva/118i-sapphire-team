@@ -1,60 +1,50 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="EIH Budget Allocation", layout="wide")
-st.title("💰 Budget & Financial Planning for Emergency Interim Housing")
-st.caption("Breakdown of costs, funding sources, and what’s needed to scale.")
+def main():
+    # Page setup
+    st.set_page_config(page_title="EIH Budget", layout="wide")
+    st.title("💰 EIH Budget Overview")
+    st.write("✅ App loaded successfully!")
 
-st.markdown("---")
+    # Budget data
+    data = {
+        'Category': [
+            'Facility Leasing', 'Staff Wages', 'Food & Supplies',
+            'Mental Health', 'Security', 'Transportation', 'Admin'
+        ],
+        'Cost': [1200000, 850000, 500000, 400000, 200000, 150000, 100000]
+    }
+    df = pd.DataFrame(data)
 
-st.header("📊 Current Year Budget Overview (Sample)")
+    # Show table and bar chart
+    st.header("📊 Budget Breakdown")
+    st.dataframe(df)
+    st.bar_chart(df.set_index("Category"))
 
-budget_data = {
-    'Category': ['Facility Leasing', 'Staff Wages', 'Food & Supplies', 'Mental Health Services', 'Security', 'Transportation', 'Admin & Overhead'],
-    'Cost ($)': [1200000, 850000, 500000, 400000, 200000, 150000, 100000]
-}
-df = pd.DataFrame(budget_data)
+    # Total cost
+    total = df["Cost"].sum()
+    st.metric("Total Budget", f"${total:,}")
 
-st.dataframe(df)
+    # Funding
+    st.header("💬 Funding Sources")
+    funding_total = 1000000 + 800000 + 600000 + 300000
+    st.write("- HUD: $1,000,000")
+    st.write("- State: $800,000")
+    st.write("- City: $600,000")
+    st.write("- Private: $300,000")
 
-st.subheader("💸 Total Annual Budget")
-total_budget = df["Cost ($)"].sum()
-st.metric(label="Projected Budget", value=f"${total_budget:,}")
+    # Budget gap
+    st.header("🧮 Budget Gap")
+    gap = total - funding_total
 
-st.markdown("---")
-st.header("📉 Budget Allocation Chart")
-fig, ax = plt.subplots()
-ax.pie(df["Cost ($)"], labels=df["Category"], autopct="%1.1f%%", startangle=140)
-ax.axis("equal")
-st.pyplot(fig)
+    if gap <= 0:
+        st.success("Fully funded! 🎉")
+    else:
+        st.error(f"Shortfall: ${gap:,}")
+        st.write("Suggestions:")
+        st.write("- Apply for FEMA")
+        st.write("- Start donor campaign")
 
-st.markdown("---")
-st.header("💬 Funding Sources")
-
-sources = {
-    "Federal HUD Grants": "$1,000,000",
-    "State Emergency Funds": "$800,000",
-    "City Budget Allocation": "$600,000",
-    "Private/Philanthropy": "$300,000"
-}
-for key, val in sources.items():
-    st.markdown(f"- **{key}**: {val}")
-
-st.markdown("---")
-st.header("🧮 Budget Gap Analysis")
-
-gap = total_budget - (1000000 + 800000 + 600000 + 300000)
-if gap <= 0:
-    st.success("✅ Fully funded! Great job building strong partnerships.")
-else:
-    st.error(f"🚨 Budget shortfall: ${gap:,}.")
-    st.markdown("""
-    **Recommendations**:
-    - Apply for FEMA Transitional Shelter Assistance  
-    - Launch community donor campaign  
-    - Reduce admin costs via shared service models  
-    """)
-
-st.markdown("---")
-st.caption("Note: All numbers are illustrative and for prototype purposes.")
+if __name__ == "__main__":
+    main()
