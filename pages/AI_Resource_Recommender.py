@@ -46,4 +46,4 @@ if st.button("🔍 Get AI-Powered Resource Suggestions"):
 
 # footer
 st.markdown("---")
-st.caption("Provided by the Sapphire Team 💎")
+st.caption("Provided by the Sapphire Team 💎 • Powered by OpenAI & Streamlit")

@@ -8,22 +8,12 @@ st.sidebar.markdown("# Resources & Help 🆘 ")
 
 # page title
 st.title('Resources & Help 🆘 ')
-st.write = ('For individuals seeking emergency interim housing and support services in San Jose, CA!')
+st.text('For individuals seeking emergency interim housing and support services in San Jose, CA!')
 
 # title for san jose resources
 st.subheader('Resource Locations', divider='blue')
-st.write = ('These resources are mainly listed for the San Jose/Santa Clara County area.')
+st.text('These resources are mainly listed for the San Jose/Santa Clara County area.')
 
-# ----------------------------------------------------------------
-# for shelter locations
-st.subheader('Emergency Shelters', divider= 'blue')
-
-df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.33, -121.88],
-    columns=['lat', 'lon'])
-st.map(df)
-st.link_button("Click for more map examples", "https://docs.streamlit.io/develop/api-reference/charts/st.map")
-   
    # for ___ housing
 st.markdown('''
 - **[HomeFirst Services](https://www.homefirstscc.org/)**  
@@ -36,6 +26,17 @@ st.markdown('''
 st.markdown('''
 - **[CityTeam San Jose](https://www.cityteam.org/san-jose)**  
   Services: Food, shelter, addiction recovery, and transitional housing''')
+
+# ----------------------------------------------------------------
+# for shelter locations
+st.subheader('Emergency Shelters', divider= 'blue')
+
+df = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.33, -121.88],
+    columns=['lat', 'lon'])
+st.map(df)
+st.link_button("Click for more map examples", "https://docs.streamlit.io/develop/api-reference/charts/st.map")
+   
 # ----------------------------------------------------------------
 
 # for local food banks and basic needs
@@ -65,7 +66,6 @@ st.markdown('''
 st.subheader('Crisis Lines', divider= 'blue')
 
 col1, col2 = st.columns(2)
-
 with col1:
   st.subheader('Domestic Violence & Safety')
   st.markdown('''
@@ -74,14 +74,6 @@ with col1:
   - **[YWCA Silicon Valley](https://www.ywca-sv.org/)**  
     Services: Safe housing, advocacy, counseling
   ''')
-  st.subheader('Veterans Crisis Line')
-  st.markdown('''
-  - **[Veterans Crisis Line](https://www.veteranscrisisline.net/)**  
-    Call:    Dial 988 then press 1  
-    Text:    838255
-  ''')
-
-
 with col2: 
   st.subheader('Mental Health Support')
   st.markdown('''
@@ -90,12 +82,25 @@ with col2:
   - **[NAMI (National Alliance on Mental Illness)](https://www.nami.org/)**  
     Helpline:  1-800-950-NAMI (6564)
   ''')
+
+
+col3, col4 = st.columns(2)
+with col3:
+  st.subheader('Veterans Crisis Line')
+  st.markdown('''
+  - **[Veterans Crisis Line](https://www.veteranscrisisline.net/)**  
+    Call:    Dial 988 then press 1  
+    Text:    838255
+  ''')
+with col4: 
   st.subheader('Human Trafficking Hotline')
   st.markdown('''
   - **[Human Trafficking Hotline](https://www.humantraffickinghotline.org/)**  
     Call:    1-888-373-7888  
     Text:    “HELP” to 233733
   ''')
+   
+
 
 # ----------------------------------------------------------------
 # for transportation support
@@ -133,4 +138,4 @@ st.markdown('''
 
 # footer
 st.markdown("---")
-st.caption("Provided by the Sapphire Team 💎")
+st.caption("Provided by the Sapphire Team 💎 • Powered by OpenAI & Streamlit")

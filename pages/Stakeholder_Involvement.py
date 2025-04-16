@@ -74,4 +74,4 @@ st.image("https://images.unsplash.com/photo-1573164574572-cb89e39749b4", caption
 
 # footer
 st.markdown("---")
-st.caption("Provided by the Sapphire Team 💎")
+st.caption("Provided by the Sapphire Team 💎 • Powered by OpenAI & Streamlit")

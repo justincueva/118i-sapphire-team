@@ -64,3 +64,7 @@ if st.button("Analyze"):
 
             except Exception as e:
                 st.warning(f"OpenAI error for post #{idx}: {e}")
+
+# footer
+st.markdown("---")
+st.caption("Provided by the Sapphire Team 💎 • Powered by OpenAI & Streamlit")
