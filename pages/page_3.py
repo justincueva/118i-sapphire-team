@@ -7,7 +7,6 @@ import os
 # for it to pop up on the sidebar
 st.sidebar.markdown("# AI Housing Chat Assistant 💬")
 
-st.set_page_config(page_title="Housing AI Chat", layout="wide")
 st.title("💬 AI Housing Chat Assistant")
 st.caption("Chat with our AI for help understanding services, policies, or how to apply.")
 

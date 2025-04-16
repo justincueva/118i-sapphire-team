@@ -10,7 +10,6 @@ st.sidebar.markdown("# AI Intake Assistant 🧠")
 
 
 # Set up the Streamlit page
-st.set_page_config(page_title="AI Intake Assistant", layout="wide")
 st.title("🧠 AI Intake Assistant")
 st.caption("Describe your housing situation. Let AI suggest next steps based on your story.")
 
