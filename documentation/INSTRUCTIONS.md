@@ -10,9 +10,10 @@
     ie. pip3 install streamlit, pandas, numpy, openai, praw
 
 # to make sure its in the right path
+    use pwd to find your path
     cd insert/path/for/this/file 
    ie. /Users/reanne/Documents/GitHub/118i-sapphire-team
     ls : to check what is found in that folder 
 
 # launching: 
-    streamlit run main_page.py
+    streamlit run Main_Page.py

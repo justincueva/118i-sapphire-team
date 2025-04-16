@@ -10,3 +10,15 @@
 i think the translator and the speech bot can be placed in the same page.
 it can reduce the excess space and it will look a bit more cohesive. 
 it can go under as translator and speech
+
+from the prof
+- change reddit to nextdoor
+- implement the map ==> connect the data later to make to find the shelters 
+- find out what form/ things nextdoor will deem as important for them to know. 
+    - gerneate some sample posts abt san jose
+
+- make the 3rd feature (translator) a setting page
+    - integrate it into feature 1. 
+        - ui change. 
+        - make it so that they can change the language of the page. 
+    - supporting feature.
