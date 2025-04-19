@@ -12,10 +12,11 @@ it can reduce the excess space and it will look a bit more cohesive.
 it can go under as translator and speech
 
 from the prof
-- change reddit to nextdoor
+- add a feature like nextdoor *(potential feature)
+    - similar application as the reddit
 - implement the map ==> connect the data later to make to find the shelters 
 - find out what form/ things nextdoor will deem as important for them to know. 
-    - gerneate some sample posts abt san jose
+    - generate some sample posts abt san jose
 
 - make the 3rd feature (translator) a setting page
     - integrate it into feature 1. 
